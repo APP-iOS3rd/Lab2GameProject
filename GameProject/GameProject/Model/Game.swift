@@ -8,7 +8,6 @@
 import Foundation
 
 class GameObservable: ObservableObject {
-    @Published var gamesList: [Game] = []
     @Published var rpg: [Game] = [
         Game(name: "legend", image: "legend_rpg" , category: "rpg", isLike: false),
         Game(name: "hero", image: "hero_rpg" , category: "rpg", isLike: false),
