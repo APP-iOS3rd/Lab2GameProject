@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LibraryView: View {
-    @StateObject var gameObservable = GameObservable()
+    @StateObject var gameObservable: GameObservable
     
     private let layouts: [GridItem] = [GridItem(), GridItem()]
     
@@ -42,7 +42,6 @@ struct LibraryView: View {
                                         }, label: {
                                             Image(systemName: "heart.fill")
                                                 .font(.system(size: 30))
-                                                .foregroundStyle(.pink)
                                                 .padding(.leading, 110)
                                                 .padding(.top, 65)
                                         })
@@ -82,8 +81,7 @@ struct LibraryView: View {
                                             }
                                         }, label: {
                                             Image(systemName: "heart.fill")
-                                                .font(.system(size: 30))
-                                                .foregroundStyle(.pink)
+                                                .font(.system(size: 30))                                                
                                                 .padding(.leading, 110)
                                                 .padding(.top, 65)
                                         })
@@ -111,6 +109,6 @@ struct LibraryView: View {
     }
 }
 
-#Preview {
-    LibraryView(gameObservable: GameObservable())
-}
+//#Preview {
+//    LibraryView(gameObservable: GameObservable())
+//}
