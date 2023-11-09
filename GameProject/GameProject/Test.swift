@@ -7,17 +7,13 @@
 
 import SwiftUI
 
-
-
 struct Test: View {
-    
     var body: some View {
         VStack {
-            ForEach(gameObjs.gamesList, id: \.self) { game in
-                game.image
+            ForEach (games, id: \.self) { game in
+                
             }
         }
-
     }
 }
 
