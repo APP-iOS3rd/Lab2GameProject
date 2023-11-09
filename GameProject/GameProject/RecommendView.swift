@@ -58,7 +58,7 @@ struct RecommendView: View {
                                                     Text(game.wrappedValue.name)
                                                     Button(action: {
                                                         if let index = gameObservable.rpg.firstIndex(of: game.wrappedValue) {
-                                                            gameObservable.fps[index].isLike = gameObservable.fps[index].isLike ? false : true
+                                                            gameObservable.rpg[index].isLike = gameObservable.rpg[index].isLike ? false : true
                                                         }
                                                     }, label: {
                                                         Image(systemName: game.wrappedValue.isLike ? "heart.fill" : "heart" )
