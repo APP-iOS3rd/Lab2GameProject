@@ -29,25 +29,23 @@ struct LibraryView: View {
                         ForEach($gameObservable.rpg, id: \.self) { (game: Binding<Game>) in
                             if game.wrappedValue.isLike {
                                 VStack {
-                                    ZStack {
-                                        Image(game.wrappedValue.image)
-                                            .resizable()
-                                            .frame(width: 150, height: 100)
-                                            .aspectRatio(contentMode: .fit)
-                                            
+                                    Image(game.wrappedValue.image)
+                                        .resizable()
+                                        .frame(width: 150, height: 100)
+                                        .aspectRatio(contentMode: .fit)
+                                    
+                                    HStack {
+                                        Text(game.wrappedValue.name)
+                                            .bold()
+                                        
                                         Button(action: {
                                             if let index = gameObservable.rpg.firstIndex(of: game.wrappedValue){
                                                 gameObservable.rpg[index].isLike = false
                                             }
                                         }, label: {
                                             Image(systemName: "heart.fill")
-                                                .font(.system(size: 30))
-                                                .padding(.leading, 110)
-                                                .padding(.top, 65)
                                         })
                                     }
-                                    Text(game.wrappedValue.name)
-                                        .bold()
                                 }
                             }
                         }
@@ -69,25 +67,23 @@ struct LibraryView: View {
                         ForEach($gameObservable.fps, id: \.self) { (game: Binding<Game>) in
                             if game.wrappedValue.isLike {
                                 VStack {
-                                    ZStack {
-                                        Image(game.wrappedValue.image)
-                                            .resizable()
-                                            .frame(width: 150, height: 100)
-                                            .aspectRatio(contentMode: .fit)
-                                            
+                                    Image(game.wrappedValue.image)
+                                        .resizable()
+                                        .frame(width: 150, height: 100)
+                                        .aspectRatio(contentMode: .fit)
+                                    
+                                    HStack {
+                                        Text(game.wrappedValue.name)
+                                            .bold()
+                                        
                                         Button(action: {
                                             if let index = gameObservable.fps.firstIndex(of: game.wrappedValue){
                                                 gameObservable.fps[index].isLike = false
                                             }
                                         }, label: {
                                             Image(systemName: "heart.fill")
-                                                .font(.system(size: 30))                                                
-                                                .padding(.leading, 110)
-                                                .padding(.top, 65)
                                         })
                                     }
-                                    Text(game.wrappedValue.name)
-                                        .bold()
                                 }
                             }
                         }

@@ -30,7 +30,7 @@ struct RecommendView: View {
                                                 gameObservable.fps[index].isLike = true
                                             }
                                         }, label: {
-                                            Image(systemName: game.wrappedValue.isLike ?? false ? "heart.fill" : "heart" )
+                                            Image(systemName: game.wrappedValue.isLike ? "heart.fill" : "heart" )
                                         })
                                     }
                                 }
@@ -60,7 +60,7 @@ struct RecommendView: View {
                                                             gameObservable.rpg[index].isLike = true
                                                         }
                                                     }, label: {
-                                                        Image(systemName: game.wrappedValue.isLike ?? false ? "heart.fill" : "heart" )
+                                                        Image(systemName: game.wrappedValue.isLike ? "heart.fill" : "heart" )
                                                     })
                                                 }
                                             }
