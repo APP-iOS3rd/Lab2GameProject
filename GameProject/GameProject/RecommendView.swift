@@ -27,7 +27,8 @@ struct RecommendView: View {
                                         Text(game.wrappedValue.name)
                                         Button(action: {
                                             if let index = gameObservable.fps.firstIndex(of: game.wrappedValue) {
-                                                gameObservable.fps[index].isLike = true
+                                                gameObservable.fps[index].isLike = gameObservable.fps[index].isLike ? false : true
+
                                             }
                                         }, label: {
                                             Image(systemName: game.wrappedValue.isLike ? "heart.fill" : "heart" )
@@ -57,7 +58,7 @@ struct RecommendView: View {
                                                     Text(game.wrappedValue.name)
                                                     Button(action: {
                                                         if let index = gameObservable.rpg.firstIndex(of: game.wrappedValue) {
-                                                            gameObservable.rpg[index].isLike = true
+                                                            gameObservable.fps[index].isLike = gameObservable.fps[index].isLike ? false : true
                                                         }
                                                     }, label: {
                                                         Image(systemName: game.wrappedValue.isLike ? "heart.fill" : "heart" )
