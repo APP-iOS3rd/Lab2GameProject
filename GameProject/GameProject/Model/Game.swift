@@ -5,7 +5,7 @@
 //  Created by 김지훈 on 2023/11/09.
 //
 
-import Foundation
+import SwiftUI
 
 class GameObservable: ObservableObject {
     @Published var gamesList: [Game] = []
@@ -16,7 +16,7 @@ class GameObservable: ObservableObject {
 struct Game: Identifiable {
     let id = UUID()
     var name: String   //게임 이름
-    var image: String  //게임 이미지 링크
+    var image: Image  //게임 이미지 링크
     var category: String    //카테고리
-    var isLike: Bool        //좋아요
+    var isLike: Bool?        //좋아요
 }
